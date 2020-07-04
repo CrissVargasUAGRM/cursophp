@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 function divide(&$divisor, $dividendo=1){
     $resultado = $divisor/$dividendo;
     echo "el resultado de la division es: $resultado";
@@ -25,6 +25,19 @@ recursiva(1);
 $operacion = function($num1,$num2){
     return $num1+$num2;
 };
-echo $operacion(1,2);
+
+echo $operacion(3,5);
+
+//declaraciones de tipo escalar
+
+function validacion(int $edad):string{
+    if($edad >= 18){
+        return "puedes entrar";
+    }else{
+        return "no puedes entrar";
+    }
+}
+
+echo validacion(18);
 
 ?>
